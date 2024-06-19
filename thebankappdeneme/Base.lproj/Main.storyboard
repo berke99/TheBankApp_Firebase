@@ -34,19 +34,30 @@
                                     <action selector="uyeOlButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vk-iN-3SZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-0Z-8v7">
+                                <rect key="frame" x="50" y="382" width="293" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="girisYapButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHa-x0-CZm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QNY-lp-c1J" firstAttribute="top" secondItem="zKb-0Z-8v7" secondAttribute="bottom" constant="50" id="1eX-mH-j6z"/>
                             <constraint firstItem="kMy-sL-qxp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="3Ba-i9-6ax"/>
                             <constraint firstItem="QNY-lp-c1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="49Q-sZ-lSU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNY-lp-c1J" secondAttribute="trailing" constant="50" id="8Ol-sc-jm1"/>
                             <constraint firstItem="kMy-sL-qxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="IwA-SO-gOh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELz-Ki-SlK" secondAttribute="trailing" constant="30" id="ao8-Zv-c1c"/>
+                            <constraint firstItem="zKb-0Z-8v7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hy9-9P-97w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kMy-sL-qxp" secondAttribute="trailing" constant="30" id="jWh-7b-zoJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QNY-lp-c1J" secondAttribute="bottom" constant="350" id="uFJ-cE-dMC"/>
                             <constraint firstItem="ELz-Ki-SlK" firstAttribute="top" secondItem="kMy-sL-qxp" secondAttribute="bottom" constant="30" id="vY1-St-3gW"/>
                             <constraint firstItem="ELz-Ki-SlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xty-eK-PIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zKb-0Z-8v7" secondAttribute="trailing" constant="50" id="z9U-vp-wtI"/>
                         </constraints>
                     </view>
                     <connections>

@@ -96,6 +96,38 @@ class LogInViewController: UIViewController {
         }
 
         
+    }// üye ol button
+    
+    @IBAction func girisYapButtonTapped(_ sender: Any) {
+        // email ve password boş veya nil mi diye kontrol et
+           guard let email = emailTextField.text, !email.isEmpty else {
+               makeAlert(title: "Error", message: "Email field is empty")
+               return
+           }
+
+           guard let password = passwordTextField.text, !password.isEmpty else {
+               makeAlert(title: "Error", message: "Password field is empty")
+               return
+           }
+
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let error = error {
+                    print("Error logging in user: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
+                        self.makeAlert(title: "Error", message: error.localizedDescription)
+                    }
+                } else {
+                    print("User logged in successfully.")
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "toMainVC", sender: nil)
+                    }
+                }
+            }
     }
     
+    
+    
+    
+    
 }
+
