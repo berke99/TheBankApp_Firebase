@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMy-sL-qxp">
+                                <rect key="frame" x="30" y="159" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELz-Ki-SlK">
+                                <rect key="frame" x="30" y="223" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNY-lp-c1J">
+                                <rect key="frame" x="50" y="433" width="293" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Üye Ol "/>
+                                <connections>
+                                    <action selector="uyeOlButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vk-iN-3SZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kMy-sL-qxp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="3Ba-i9-6ax"/>
+                            <constraint firstItem="QNY-lp-c1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="49Q-sZ-lSU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNY-lp-c1J" secondAttribute="trailing" constant="50" id="8Ol-sc-jm1"/>
+                            <constraint firstItem="kMy-sL-qxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="IwA-SO-gOh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELz-Ki-SlK" secondAttribute="trailing" constant="30" id="ao8-Zv-c1c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kMy-sL-qxp" secondAttribute="trailing" constant="30" id="jWh-7b-zoJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QNY-lp-c1J" secondAttribute="bottom" constant="350" id="uFJ-cE-dMC"/>
+                            <constraint firstItem="ELz-Ki-SlK" firstAttribute="top" secondItem="kMy-sL-qxp" secondAttribute="bottom" constant="30" id="vY1-St-3gW"/>
+                            <constraint firstItem="ELz-Ki-SlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xty-eK-PIb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="kMy-sL-qxp" id="sDK-cJ-QbF"/>
+                        <outlet property="passwordTextField" destination="ELz-Ki-SlK" id="DTV-Nr-U83"/>
+                        <segue destination="xyP-NR-TXI" kind="presentation" identifier="toMainVC" modalPresentationStyle="fullScreen" id="x30-Gf-Ooc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="158" y="36"/>
+        </scene>
+        <!--Ayarlar-->
+        <scene sceneID="u6w-fu-wcd">
+            <objects>
+                <viewController id="vGv-Tt-9ew" customClass="AyarlarViewController" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JDy-qg-kTc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sj4-oa-vdd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="gearshape.fill" catalog="system" id="mKx-6u-hBj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpk-IX-Bej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953" y="375"/>
+        </scene>
+        <!--Ana Hesap-->
+        <scene sceneID="JMq-8h-2OA">
+            <objects>
+                <viewController id="8do-vQ-Hvl" customClass="AnaSayfaViewController" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="puC-xI-Wmf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoT-AQ-hQ3">
+                                <rect key="frame" x="30" y="150" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesap UID: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q45-bZ-Jgr">
+                                <rect key="frame" x="30" y="221" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesap Miktar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD0-TC-1TH">
+                                <rect key="frame" x="30" y="272" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sz0-z0-imF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q45-bZ-Jgr" firstAttribute="top" secondItem="EoT-AQ-hQ3" secondAttribute="bottom" constant="50" id="AKB-MG-AfM"/>
+                            <constraint firstItem="EoT-AQ-hQ3" firstAttribute="leading" secondItem="sz0-z0-imF" secondAttribute="leading" constant="30" id="Czv-eO-3vM"/>
+                            <constraint firstItem="sz0-z0-imF" firstAttribute="trailing" secondItem="q45-bZ-Jgr" secondAttribute="trailing" constant="30" id="agM-Hg-pLM"/>
+                            <constraint firstItem="q45-bZ-Jgr" firstAttribute="leading" secondItem="sz0-z0-imF" secondAttribute="leading" constant="30" id="fls-3i-sze"/>
+                            <constraint firstItem="tD0-TC-1TH" firstAttribute="top" secondItem="q45-bZ-Jgr" secondAttribute="bottom" constant="30" id="gM4-ev-bOU"/>
+                            <constraint firstItem="tD0-TC-1TH" firstAttribute="leading" secondItem="sz0-z0-imF" secondAttribute="leading" constant="30" id="oB1-BR-eFt"/>
+                            <constraint firstItem="sz0-z0-imF" firstAttribute="trailing" secondItem="EoT-AQ-hQ3" secondAttribute="trailing" constant="30" id="tAc-nK-92U"/>
+                            <constraint firstItem="sz0-z0-imF" firstAttribute="trailing" secondItem="tD0-TC-1TH" secondAttribute="trailing" constant="30" id="u4y-3X-NIA"/>
+                            <constraint firstItem="EoT-AQ-hQ3" firstAttribute="top" secondItem="sz0-z0-imF" secondAttribute="top" constant="150" id="zHQ-5C-7b2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ana Hesap" image="externaldrive.fill" catalog="system" id="xSy-kj-v7c"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="EoT-AQ-hQ3" id="fHk-Pt-cH3"/>
+                        <outlet property="hesapMiktarLabel" destination="tD0-TC-1TH" id="xiu-wO-HcB"/>
+                        <outlet property="hesapUidLabel" destination="q45-bZ-Jgr" id="fvq-6B-Ytr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0in-zA-gX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953" y="-315"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XUB-aT-DjW">
+            <objects>
+                <tabBarController id="xyP-NR-TXI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uLc-BM-Jm5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8do-vQ-Hvl" kind="relationship" relationship="viewControllers" id="S8F-7Z-Dwk"/>
+                        <segue destination="vGv-Tt-9ew" kind="relationship" relationship="viewControllers" id="GFZ-Kj-aIc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwE-ym-OXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="externaldrive.fill" catalog="system" width="128" height="87"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

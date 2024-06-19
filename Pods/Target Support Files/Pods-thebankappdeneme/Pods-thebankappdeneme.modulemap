@@ -1,0 +1,6 @@
+framework module Pods_thebankappdeneme {
+  umbrella header "Pods-thebankappdeneme-umbrella.h"
+
+  export *
+  module * { export * }
+}

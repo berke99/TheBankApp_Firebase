@@ -6,24 +6,32 @@
 //
 
 import UIKit
+import FirebaseFirestoreInternal
 
 class AnaSayfaViewController: UIViewController {
 
+    //MARK: - UI Elements
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var hesapUidLabel: UILabel!
+    @IBOutlet weak var hesapMiktarLabel: UILabel!
+    
+    //MARK: - Properties
+    
+    var kullanıcıId: String?
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    //MARK: - Functions
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    //MARK: - Actions
+    
+    
 }
