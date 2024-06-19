@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AyarlarViewController: UIViewController {
 
@@ -23,7 +24,23 @@ class AyarlarViewController: UIViewController {
     
     //MARK: - Functions
     
+    
     //MARK: - Actions
 
+    // self.performSegue(withIdentifier: "toMainView", sender: nil)
+
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.performSegue(withIdentifier: "toMainView", sender: nil)
+        }catch{
+            print("Error signing out")
+        }
+
+        
+    }
+    
 
 }
