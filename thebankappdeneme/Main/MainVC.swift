@@ -13,8 +13,9 @@ class MainVC: UIViewController {
     
     //MARK: - UI Elements
     
-    
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
     
     //MARK: - Properties
@@ -53,17 +54,25 @@ class MainVC: UIViewController {
                let mobilePhone = data?["mobilePhone"] as? String {
                 // Kullanıcı profil bilgilerini kullanın
                 print("User Profile: \(firstName) \(lastName), \(email), \(mobilePhone)")
+
+                self!.updateUi(firstName: firstName, lastName: lastName, email: email, mobilePhone: mobilePhone)
+                    
                 // Burada kullanıcı profil bilgilerini UI'da güncelleyebilirsiniz
             } else {
                 print("User profile data is incomplete or malformed")
             }
-            
-            
 
-            
         }
-        
     }
+    
+    
+    func updateUi(firstName: String, lastName: String, email: String,mobilePhone: String ){
+        nameLabel.text = "Ad Soyad:  \(firstName) \(lastName)"
+        emailLabel.text = "Email:  \(email)"
+        phoneLabel.text = "Phone Number:  \(mobilePhone)"
+    }
+
+
     
     //MARK: - Actions
 

@@ -49,6 +49,8 @@ class CreateAccountVC: UIViewController {
         
         authenticationVM.createUserAccount(firstName: firstName, lastName: lastName, email: email, mobilePhone: mobilePhone, password: password)
         
+        
+        
     }
     
     

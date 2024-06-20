@@ -80,7 +80,7 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "accountsCell")!
         let account = userAccounts[indexPath.row]
         cell.textLabel?.text = account.accountType
-        cell.detailTextLabel?.text = "\(account.amount) \(account.currency.rawValue)" // Daha uygun bir şekilde currency kullanaib
+        cell.detailTextLabel?.text = "\(account.amount) \(account.currency.rawValue)"
         return cell
     }
     

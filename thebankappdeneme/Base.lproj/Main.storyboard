@@ -167,6 +167,7 @@
                         <outlet property="lastNameTextField" destination="tks-80-ALf" id="lnC-hR-aO9"/>
                         <outlet property="mobilePhoneTextField" destination="05L-5F-ial" id="Rbr-Og-TF7"/>
                         <outlet property="passwordTextField" destination="41q-0T-SBG" id="4Wd-W3-1bS"/>
+                        <segue destination="DGP-0I-CL4" kind="presentation" identifier="toMainVC" modalPresentationStyle="fullScreen" id="fVc-5p-WH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62v-cn-m5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -279,6 +280,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ana Sayfa" largeTitleDisplayMode="always" id="pDw-yj-aT0"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="9J0-H9-kkc" id="G7E-GL-Ldt"/>
+                        <outlet property="nameLabel" destination="1ra-1W-Fwf" id="YiC-95-v5v"/>
+                        <outlet property="phoneLabel" destination="eFO-sO-J9Q" id="xDj-sq-dRl"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2985.4961832061067" y="72.535211267605632"/>
@@ -287,6 +293,7 @@
         <scene sceneID="dpu-Uh-HKE">
             <objects>
                 <tabBarController id="DGP-0I-CL4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZyM-BA-yzC"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MLs-Bk-CdW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -324,7 +331,7 @@
         <scene sceneID="606-uV-H7e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cq-Yf-i2z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Accounts" selectedImage="folder.fill" catalog="system" id="tlB-Kq-rq7"/>
+                    <tabBarItem key="tabBarItem" title="Accounts" image="folder.fill" catalog="system" id="tlB-Kq-rq7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bcg-9o-hsY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -340,6 +347,9 @@
             <point key="canvasLocation" x="2058.7786259541986" y="784.50704225352115"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fVc-5p-WH1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="externaldrive.fill" catalog="system" width="128" height="87"/>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
