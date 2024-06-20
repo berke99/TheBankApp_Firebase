@@ -12,6 +12,23 @@ import FirebaseAuth
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+/*
+ //MARK: - UI Elements
+ 
+ //MARK: - Properties
+
+ //MARK: - Life Cycle
+ override func viewDidLoad() {
+     super.viewDidLoad()
+
+     // Do any additional setup after loading the view.
+ }
+ //MARK: - Functions
+ 
+ //MARK: - Actions
+
+
+ */
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

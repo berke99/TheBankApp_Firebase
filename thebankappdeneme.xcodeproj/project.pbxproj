@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		367F676B2C219FC6001844A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F676A2C219FC6001844A6 /* AppDelegate.swift */; };
 		367F676D2C219FC6001844A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F676C2C219FC6001844A6 /* SceneDelegate.swift */; };
-		367F676F2C219FC6001844A6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F676E2C219FC6001844A6 /* LogInViewController.swift */; };
 		367F67722C219FC6001844A6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 367F67712C219FC6001844A6 /* Base */; };
 		367F67742C219FC7001844A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367F67732C219FC7001844A6 /* Assets.xcassets */; };
 		367F67772C219FC7001844A6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 367F67762C219FC7001844A6 /* Base */; };
 		367F677F2C21A0B8001844A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 367F677E2C21A0B8001844A6 /* GoogleService-Info.plist */; };
-		3683F32D2C21B80600854667 /* AnaSayfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683F32C2C21B80600854667 /* AnaSayfaViewController.swift */; };
-		3683F32F2C21B84E00854667 /* AyarlarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683F32E2C21B84D00854667 /* AyarlarViewController.swift */; };
+		368BC1732C24500400D26995 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BC1722C24500400D26995 /* AccountsVC.swift */; };
+		368BC1752C24502100D26995 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BC1742C24502100D26995 /* MainVC.swift */; };
+		36C10A792C2423AB00BC4F22 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C10A782C2423AB00BC4F22 /* SignInVC.swift */; };
+		36C10A7B2C24263300BC4F22 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C10A7A2C24263300BC4F22 /* CreateAccountVC.swift */; };
+		36C10A7D2C24286F00BC4F22 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C10A7C2C24286F00BC4F22 /* AuthenticationViewModel.swift */; };
+		36C10A802C2428C400BC4F22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C10A7F2C2428C400BC4F22 /* User.swift */; };
+		36C10A822C2437D000BC4F22 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C10A812C2437D000BC4F22 /* BankAccount.swift */; };
 		8FD3EC5CDD13C872A05EB1C1 /* Pods_thebankappdeneme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42D8FD7F7C7FB0153F4C617 /* Pods_thebankappdeneme.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,14 +28,18 @@
 		367F67672C219FC6001844A6 /* thebankappdeneme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thebankappdeneme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367F676A2C219FC6001844A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367F676C2C219FC6001844A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		367F676E2C219FC6001844A6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		367F67712C219FC6001844A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		367F67732C219FC7001844A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367F67762C219FC7001844A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367F67782C219FC7001844A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		367F677E2C21A0B8001844A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3683F32C2C21B80600854667 /* AnaSayfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaSayfaViewController.swift; sourceTree = "<group>"; };
-		3683F32E2C21B84D00854667 /* AyarlarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewController.swift; sourceTree = "<group>"; };
+		368BC1722C24500400D26995 /* AccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
+		368BC1742C24502100D26995 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		36C10A782C2423AB00BC4F22 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		36C10A7A2C24263300BC4F22 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		36C10A7C2C24286F00BC4F22 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		36C10A7F2C2428C400BC4F22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		36C10A812C2437D000BC4F22 /* BankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
 		D42D8FD7F7C7FB0153F4C617 /* Pods_thebankappdeneme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thebankappdeneme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95DAF929CDE2506C8ED02BB /* Pods-thebankappdeneme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thebankappdeneme.release.xcconfig"; path = "Target Support Files/Pods-thebankappdeneme/Pods-thebankappdeneme.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,11 +77,12 @@
 		367F67692C219FC6001844A6 /* thebankappdeneme */ = {
 			isa = PBXGroup;
 			children = (
+				36C10A7E2C2428B300BC4F22 /* Models */,
+				36C10A772C2421E100BC4F22 /* Authentication */,
+				36C10A842C244F2F00BC4F22 /* Main */,
+				368BC1712C244FE800D26995 /* Accounts */,
 				367F676A2C219FC6001844A6 /* AppDelegate.swift */,
 				367F676C2C219FC6001844A6 /* SceneDelegate.swift */,
-				367F676E2C219FC6001844A6 /* LogInViewController.swift */,
-				3683F32C2C21B80600854667 /* AnaSayfaViewController.swift */,
-				3683F32E2C21B84D00854667 /* AyarlarViewController.swift */,
 				367F67702C219FC6001844A6 /* Main.storyboard */,
 				367F67732C219FC7001844A6 /* Assets.xcassets */,
 				367F67752C219FC7001844A6 /* LaunchScreen.storyboard */,
@@ -81,6 +90,41 @@
 				367F677E2C21A0B8001844A6 /* GoogleService-Info.plist */,
 			);
 			path = thebankappdeneme;
+			sourceTree = "<group>";
+		};
+		368BC1712C244FE800D26995 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				368BC1722C24500400D26995 /* AccountsVC.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		36C10A772C2421E100BC4F22 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				36C10A7C2C24286F00BC4F22 /* AuthenticationViewModel.swift */,
+				36C10A782C2423AB00BC4F22 /* SignInVC.swift */,
+				36C10A7A2C24263300BC4F22 /* CreateAccountVC.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		36C10A7E2C2428B300BC4F22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36C10A7F2C2428C400BC4F22 /* User.swift */,
+				36C10A812C2437D000BC4F22 /* BankAccount.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36C10A842C244F2F00BC4F22 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				368BC1742C24502100D26995 /* MainVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		544C2F91DBBD982B1C9EA206 /* Frameworks */ = {
@@ -216,11 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367F676F2C219FC6001844A6 /* LogInViewController.swift in Sources */,
-				3683F32F2C21B84E00854667 /* AyarlarViewController.swift in Sources */,
 				367F676B2C219FC6001844A6 /* AppDelegate.swift in Sources */,
-				3683F32D2C21B80600854667 /* AnaSayfaViewController.swift in Sources */,
+				36C10A7D2C24286F00BC4F22 /* AuthenticationViewModel.swift in Sources */,
+				36C10A802C2428C400BC4F22 /* User.swift in Sources */,
 				367F676D2C219FC6001844A6 /* SceneDelegate.swift in Sources */,
+				368BC1752C24502100D26995 /* MainVC.swift in Sources */,
+				368BC1732C24500400D26995 /* AccountsVC.swift in Sources */,
+				36C10A7B2C24263300BC4F22 /* CreateAccountVC.swift in Sources */,
+				36C10A822C2437D000BC4F22 /* BankAccount.swift in Sources */,
+				36C10A792C2423AB00BC4F22 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
