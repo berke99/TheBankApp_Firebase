@@ -7,7 +7,7 @@ target 'thebankappdeneme' do
 
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
-
+	pod 'IQKeyboardManagerSwift'
   # Pods for thebankappdeneme
 
 end

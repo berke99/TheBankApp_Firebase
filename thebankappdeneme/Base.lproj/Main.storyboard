@@ -283,7 +283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-bC-myd">
-                                <rect key="frame" x="100" y="587" width="193" height="35"/>
+                                <rect key="frame" x="100" y="537" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete Account">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
@@ -315,7 +315,7 @@
                             <constraint firstItem="Lzf-Pq-Hd8" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="40" id="POg-OC-IXg"/>
                             <constraint firstItem="bwk-Yk-uHJ" firstAttribute="top" secondItem="Jed-t1-Bnz" secondAttribute="bottom" constant="40" id="U5b-Ya-V9b"/>
                             <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="2Nc-HD-HGo" secondAttribute="trailing" constant="50" id="WI8-Hc-9cA"/>
-                            <constraint firstItem="Ueq-bC-myd" firstAttribute="top" secondItem="Epe-kM-ewd" secondAttribute="bottom" constant="100" id="WVv-vf-l9b"/>
+                            <constraint firstItem="Ueq-bC-myd" firstAttribute="top" secondItem="Epe-kM-ewd" secondAttribute="bottom" constant="50" id="WVv-vf-l9b"/>
                             <constraint firstItem="2Nc-HD-HGo" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="50" id="XP7-Kd-Jek"/>
                             <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="7m6-8w-YBh" secondAttribute="trailing" constant="80" id="bhS-DC-IDd"/>
                             <constraint firstItem="Epe-kM-ewd" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="80" id="dxe-Vw-bet"/>

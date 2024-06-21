@@ -34,7 +34,7 @@ class AccountVC: UIViewController {
         print("Document ID: \(documentAccountID ?? "No ID")")
 
         readAccountDetail()
-        sendMoneyToAnotherAccountButtonTapped.isEnabled
+        
     }
     //MARK: - Functions
         
