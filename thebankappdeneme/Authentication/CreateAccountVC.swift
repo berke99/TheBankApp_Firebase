@@ -31,6 +31,12 @@ class CreateAccountVC: UIViewController {
     }
     
     //MARK: - Functions
+    
+    
+    func performSegueForToMainVC(){
+        performSegue(withIdentifier: "toMainVC", sender: nil)
+    }
+
         
     //MARK: - Actions
 
@@ -49,9 +55,10 @@ class CreateAccountVC: UIViewController {
         
         authenticationVM.createUserAccount(firstName: firstName, lastName: lastName, email: email, mobilePhone: mobilePhone, password: password)
         
-        
+        dismiss(animated: true)
         
     }
+    
     
     
 }

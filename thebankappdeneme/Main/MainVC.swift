@@ -72,10 +72,23 @@ class MainVC: UIViewController {
         phoneLabel.text = "Phone Number:  \(mobilePhone)"
     }
 
+    func navigateToLoginScreen() {
+        performSegue(withIdentifier: "toSignInVC", sender: nil)
+    }
 
     
     //MARK: - Actions
 
     
 
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+                
+        do {
+            try Auth.auth().signOut()
+            navigateToLoginScreen()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+
+    }
 }

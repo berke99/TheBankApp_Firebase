@@ -23,8 +23,8 @@ class NewAccountVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     //MARK: - Properties
     
     let db = Firestore.firestore()
-    var selectedCurrency = Currency.tl
-
+    var selectedCurrency = Currency.usd
+    
     //MARK: - Life Cycle
     
     override func viewDidLoad() {

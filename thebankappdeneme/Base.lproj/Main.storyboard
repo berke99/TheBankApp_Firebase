@@ -17,29 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-g4-uTb">
-                                <rect key="frame" x="40" y="159" width="88" height="48"/>
+                                <rect key="frame" x="40" y="100" width="88" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In to your account " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gko-IC-vdi">
-                                <rect key="frame" x="40" y="227" width="206" height="24"/>
+                                <rect key="frame" x="40" y="168" width="206" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXQ-vT-ucb">
-                                <rect key="frame" x="40" y="331" width="313" height="34"/>
+                                <rect key="frame" x="40" y="272" width="313" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKf-8O-fFK">
-                                <rect key="frame" x="40" y="405" width="313" height="34"/>
+                                <rect key="frame" x="40" y="346" width="313" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-Ia-HLa">
-                                <rect key="frame" x="100" y="489" width="193" height="35"/>
+                                <rect key="frame" x="100" y="430" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
                                 <connections>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-Vm-NE2">
-                                <rect key="frame" x="100" y="564" width="193" height="35"/>
+                                <rect key="frame" x="100" y="505" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
                                 <connections>
@@ -174,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="-269" y="1238"/>
         </scene>
-        <!--Hesaplar-->
+        <!--Accounts-->
         <scene sceneID="eze-hd-UoD">
             <objects>
                 <viewController id="R2h-E5-os6" customClass="AccountsVC" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,8 +222,8 @@
                             <constraint firstItem="btf-gy-5gn" firstAttribute="top" secondItem="ODs-pD-tgg" secondAttribute="top" constant="10" id="ki8-B6-DDr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hesaplar" largeTitleDisplayMode="always" id="tQO-8g-JqS">
-                        <barButtonItem key="rightBarButtonItem" title="Hesap Aç" style="done" id="ayN-W8-09r">
+                    <navigationItem key="navigationItem" title="Accounts" largeTitleDisplayMode="always" id="tQO-8g-JqS">
+                        <barButtonItem key="rightBarButtonItem" title="Open Account" style="done" id="ayN-W8-09r">
                             <connections>
                                 <action selector="createNewAccount:" destination="R2h-E5-os6" id="dFG-yQ-CsH"/>
                             </connections>
@@ -266,17 +266,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-HD-HGo">
-                                <rect key="frame" x="80" y="367" width="233" height="35"/>
+                                <rect key="frame" x="50" y="367" width="293" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Başka Hesaba Para Gönder"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Transfer to Another Account"/>
                                 <connections>
                                     <action selector="sendMoneyToAnotherAccountButtonTapped:" destination="heg-gN-fBv" eventType="touchUpInside" id="fhx-Z9-E2D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epe-kM-ewd">
-                                <rect key="frame" x="80" y="452" width="93" height="35"/>
+                                <rect key="frame" x="80" y="452" width="96.666666666666686" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Para Çek"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Withdraw"/>
                                 <connections>
                                     <action selector="getMoneyButtonTapped:" destination="heg-gN-fBv" eventType="touchUpInside" id="eA9-XL-B1Z"/>
                                     <segue destination="c4G-Mn-Dmt" kind="show" identifier="toGetMoney" id="pGP-pl-MHp"/>
@@ -285,16 +285,19 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-bC-myd">
                                 <rect key="frame" x="100" y="587" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Hesabı Sil">
+                                <buttonConfiguration key="configuration" style="filled" title="Delete Account">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="heg-gN-fBv" eventType="touchUpInside" id="vIR-y1-Obc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7m6-8w-YBh">
-                                <rect key="frame" x="216" y="452" width="97" height="35"/>
+                                <rect key="frame" x="230" y="452" width="83" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Para Yatır"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Deposit"/>
                                 <connections>
-                                    <action selector="depositmoneydepositmoneydepositMoneyButtonTapped:" destination="heg-gN-fBv" eventType="touchUpInside" id="x9J-3O-QNQ"/>
+                                    <action selector="depositMoneyButtonTapped:" destination="heg-gN-fBv" eventType="touchUpInside" id="CrT-wK-AxX"/>
                                     <segue destination="pdR-nx-ltX" kind="show" identifier="toDepositMoney" id="83t-Zv-5DP"/>
                                 </connections>
                             </button>
@@ -311,9 +314,9 @@
                             <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="Jed-t1-Bnz" secondAttribute="trailing" constant="40" id="M86-qW-D8k"/>
                             <constraint firstItem="Lzf-Pq-Hd8" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="40" id="POg-OC-IXg"/>
                             <constraint firstItem="bwk-Yk-uHJ" firstAttribute="top" secondItem="Jed-t1-Bnz" secondAttribute="bottom" constant="40" id="U5b-Ya-V9b"/>
-                            <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="2Nc-HD-HGo" secondAttribute="trailing" constant="80" id="WI8-Hc-9cA"/>
+                            <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="2Nc-HD-HGo" secondAttribute="trailing" constant="50" id="WI8-Hc-9cA"/>
                             <constraint firstItem="Ueq-bC-myd" firstAttribute="top" secondItem="Epe-kM-ewd" secondAttribute="bottom" constant="100" id="WVv-vf-l9b"/>
-                            <constraint firstItem="2Nc-HD-HGo" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="80" id="XP7-Kd-Jek"/>
+                            <constraint firstItem="2Nc-HD-HGo" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="50" id="XP7-Kd-Jek"/>
                             <constraint firstItem="CIG-cJ-uFh" firstAttribute="trailing" secondItem="7m6-8w-YBh" secondAttribute="trailing" constant="80" id="bhS-DC-IDd"/>
                             <constraint firstItem="Epe-kM-ewd" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="80" id="dxe-Vw-bet"/>
                             <constraint firstItem="bwk-Yk-uHJ" firstAttribute="leading" secondItem="CIG-cJ-uFh" secondAttribute="leading" constant="40" id="jAN-1K-ybr"/>
@@ -385,15 +388,15 @@
             </objects>
             <point key="canvasLocation" x="5273" y="785"/>
         </scene>
-        <!--View Controller-->
+        <!--Get MoneyVC-->
         <scene sceneID="4Z0-Gh-h2k">
             <objects>
-                <viewController id="c4G-Mn-Dmt" sceneMemberID="viewController">
+                <viewController id="c4G-Mn-Dmt" customClass="GetMoneyVC" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XBe-zn-QNh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Money Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-5Q-L3J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdraw Money Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-5Q-L3J">
                                 <rect key="frame" x="0.0" y="196" width="393" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -407,7 +410,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHw-9O-Rqt">
                                 <rect key="frame" x="100" y="434" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Money"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Withdraw Money"/>
+                                <connections>
+                                    <action selector="withdrawButtonTapped:" destination="c4G-Mn-Dmt" eventType="touchUpInside" id="BtU-1g-i2a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i5i-Mh-oHh"/>
@@ -425,6 +431,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YbR-Rl-Mqb"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="8pZ-ua-b0Q" id="LdA-2l-txc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVc-ZR-RCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,23 +509,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Dm-ask">
                                 <rect key="frame" x="100" y="514" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Hesap Aç"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open Account"/>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="auD-oy-YfL" eventType="touchUpInside" id="klE-ZG-Dn5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Hesap Aç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-wU-wKw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Open Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-wU-wKw">
                                 <rect key="frame" x="40" y="40" width="313" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hesap İsmi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETX-o0-2gr">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETX-o0-2gr">
                                 <rect key="frame" x="40" y="190" width="313" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miktar " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWZ-Fz-Rz6">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWZ-Fz-Rz6">
                                 <rect key="frame" x="40" y="126" width="313" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -553,7 +562,7 @@
             </objects>
             <point key="canvasLocation" x="2985" y="1581"/>
         </scene>
-        <!--Ana Sayfa-->
+        <!--Main View-->
         <scene sceneID="5u7-1K-L8X">
             <objects>
                 <viewController id="CvZ-hb-fsb" customClass="MainVC" customModule="thebankappdeneme" customModuleProvider="target" sceneMemberID="viewController">
@@ -579,6 +588,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kv-Rb-PVT">
+                                <rect key="frame" x="100" y="398" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="CvZ-hb-fsb" eventType="touchUpInside" id="9t6-4e-xbh"/>
+                                    <segue destination="lWA-rn-Asq" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="Z2Y-Hf-pF2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="38B-Z1-F1N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -586,15 +604,18 @@
                             <constraint firstItem="38B-Z1-F1N" firstAttribute="trailing" secondItem="9J0-H9-kkc" secondAttribute="trailing" constant="40" id="1N6-UN-Ngq"/>
                             <constraint firstItem="1ra-1W-Fwf" firstAttribute="top" secondItem="38B-Z1-F1N" secondAttribute="top" constant="50" id="27Y-y0-J8e"/>
                             <constraint firstItem="9J0-H9-kkc" firstAttribute="top" secondItem="1ra-1W-Fwf" secondAttribute="bottom" constant="40" id="8Hm-Ow-ruH"/>
+                            <constraint firstItem="38B-Z1-F1N" firstAttribute="trailing" secondItem="0kv-Rb-PVT" secondAttribute="trailing" constant="100" id="EEx-4x-pXf"/>
                             <constraint firstItem="38B-Z1-F1N" firstAttribute="trailing" secondItem="1ra-1W-Fwf" secondAttribute="trailing" constant="40" id="M6a-Y7-vNu"/>
                             <constraint firstItem="9J0-H9-kkc" firstAttribute="leading" secondItem="38B-Z1-F1N" secondAttribute="leading" constant="40" id="Rhn-07-FhF"/>
+                            <constraint firstItem="0kv-Rb-PVT" firstAttribute="leading" secondItem="38B-Z1-F1N" secondAttribute="leading" constant="100" id="ViD-yn-I18"/>
                             <constraint firstItem="eFO-sO-J9Q" firstAttribute="top" secondItem="9J0-H9-kkc" secondAttribute="bottom" constant="40" id="XWJ-ea-DdG"/>
                             <constraint firstItem="eFO-sO-J9Q" firstAttribute="leading" secondItem="38B-Z1-F1N" secondAttribute="leading" constant="40" id="Y5t-aq-zwf"/>
+                            <constraint firstItem="0kv-Rb-PVT" firstAttribute="top" secondItem="eFO-sO-J9Q" secondAttribute="bottom" constant="100" id="dOC-mL-A7B"/>
                             <constraint firstItem="1ra-1W-Fwf" firstAttribute="leading" secondItem="38B-Z1-F1N" secondAttribute="leading" constant="40" id="tex-JW-NAg"/>
                             <constraint firstItem="38B-Z1-F1N" firstAttribute="trailing" secondItem="eFO-sO-J9Q" secondAttribute="trailing" constant="40" id="xFA-ae-7hO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ana Sayfa" largeTitleDisplayMode="always" id="pDw-yj-aT0"/>
+                    <navigationItem key="navigationItem" title="Main View" largeTitleDisplayMode="always" id="pDw-yj-aT0"/>
                     <connections>
                         <outlet property="emailLabel" destination="9J0-H9-kkc" id="G7E-GL-Ldt"/>
                         <outlet property="nameLabel" destination="1ra-1W-Fwf" id="YiC-95-v5v"/>
@@ -664,7 +685,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fVc-5p-WH1"/>
+        <segue reference="cuf-i6-02h"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="externaldrive.fill" catalog="system" width="128" height="87"/>

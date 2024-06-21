@@ -32,27 +32,32 @@ class AuthenticationViewModel {
 
     
     /// Firebase ile Kullanıcı Oluşturur
-    func createUserAccount(firstName: String, lastName: String, email: String, mobilePhone: String, password: String){
-        
-        let name = "\(firstName) \(lastName)"
-
-        Auth.auth().createUser(withEmail: email, password: password){ [weak self] (authResult,error) in
-            guard let strongSelf = self else { return }
-            if let error = error {
-                print("Error creating user: \(error.localizedDescription)")
-                return
-            }
-            
-            // buradan sonra kullanıcı oluşturulur
-            
-            guard let uid = authResult?.user.uid else { return }
-            
-            let user = User(firstName: firstName, lastName: lastName, email: email, mobilePhone: mobilePhone, password: password)
-            self?.userInfo(user: user, uid: uid)
-            
-        }
-        
-    }
+    func createUserAccount(firstName: String, lastName: String, email: String, mobilePhone: String, password: String) {
+           Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+               if let error = error {
+                   print("Error creating user: \(error.localizedDescription)")
+                   return
+               }
+               
+               guard let user = authResult?.user else { return }
+               let userID = user.uid
+               
+               // Save additional user data in Firestore
+               self.db.collection("Users").document(userID).setData([
+                   "firstName": firstName,
+                   "lastName": lastName,
+                   "email": email,
+                   "mobilePhone": mobilePhone
+               ]) { error in
+                   if let error = error {
+                       print("Error saving user data: \(error.localizedDescription)")
+                   } else {
+                       print("User data successfully saved")
+                       self.userFirstBankAccount(uid: userID)
+                   }
+               }
+           }
+       }
     
     /// İlk Kullanıcı Bilgilerini Kaydeder
     func userInfo(user: User, uid: String){
@@ -94,6 +99,7 @@ class AuthenticationViewModel {
                 print("Error setting document data: \(error)")
             } else {
                 print("First account data set successfully")
+                
             }
         }
         

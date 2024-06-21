@@ -1,5 +1,5 @@
 //
-//  DepositMoneyVC.swift
+//  GetMoneyVC.swift
 //  thebankappdeneme
 //
 //  Created by Berke Kesgin on 21.06.2024.
@@ -8,32 +8,34 @@
 import UIKit
 import FirebaseFirestore
 
-class DepositMoneyVC: UIViewController {
+class GetMoneyVC: UIViewController {
     
-
     //MARK: - UI Elements
+    
     
     @IBOutlet weak var amountTextField: UITextField!
     
-    //MARK: - Properties
-    
     var userID: String?
     var documentAccountID: String?
-    let db = Firestore.firestore()
+    var db = Firestore.firestore()
+    
+    //MARK: - Properties
+    
+    
 
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        print("DepositMoneyVC - User ID: \(userID ?? "DepositMoneyVC - No User ID")")
-        print("DepositMoneyVC - Document Account ID: \(documentAccountID ?? "DepositMoneyVC - No Document ID")")
+        print("GetMoneyVC - User ID: \(userID ?? "GetMoneyVC - No User ID")")
+        print("GetMoneyVC - Document Account ID: \(documentAccountID ?? "GetMoneyVC - No Document ID")")
 
     }
     //MARK: - Functions
     
-        
-        func depositMoney(amount: Double) {
+    
+    func withdrawMoney(amount: Double) {
             guard let userID = userID, let documentAccountID = documentAccountID else {
                 print("Error: userID or documentAccountID is nil")
                 return
@@ -44,7 +46,7 @@ class DepositMoneyVC: UIViewController {
             accountRef.getDocument { (document, error) in
                 if let document = document, document.exists {
                     if let data = document.data(), let currentAmount = data["amount"] as? Double {
-                        let newAmount = currentAmount + amount
+                        let newAmount = currentAmount - amount
                         
                         accountRef.updateData([
                             "amount": newAmount
@@ -63,19 +65,19 @@ class DepositMoneyVC: UIViewController {
         }
 
     
+    
+    
     //MARK: - Actions
-
-    /// Firebase Banka Hesabına Para Ekler
-    @IBAction func depositMoneybuttonTapped(_ sender: Any) {
+    
+    /// Firebase Banka Hesabına Para Çeker
+    @IBAction func withdrawButtonTapped(_ sender: Any) {
         guard let amountText = amountTextField.text, let amount = Double(amountText) else {
             print("Invalid amount entered")
             return
         }
         
-        depositMoney(amount: amount)
+        withdrawMoney(amount: amount)
         navigationController?.popViewController(animated: true)
     }
     
-    
-
 }

@@ -20,13 +20,7 @@ class AccountViewModel{
 
     // MARK: - Functions
 
-    func setAccountRef(accountID: String) {
-        guard let userID = userID else {
-            print("Error: User not authenticated.")
-            return
-        }
-        accountRef = db.collection("Users").document(userID).collection("Accounts").document(accountID)
-    }
+
     
     //MARK: - Deposit Money - Para Yükle
     

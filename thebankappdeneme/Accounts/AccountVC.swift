@@ -12,6 +12,8 @@ import FirebaseAuth
 class AccountVC: UIViewController {
 
     //MARK: - UI Elements
+    
+    @IBOutlet weak var sendMoneyToAnotherAccountButtonTapped: UIButton!
         
     @IBOutlet weak var accountTypeLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -32,6 +34,7 @@ class AccountVC: UIViewController {
         print("Document ID: \(documentAccountID ?? "No ID")")
 
         readAccountDetail()
+        sendMoneyToAnotherAccountButtonTapped.isEnabled
     }
     //MARK: - Functions
         
@@ -44,7 +47,7 @@ class AccountVC: UIViewController {
         }
 
         
-        db.collection("Users").document(userID).collection("Accounts").document(documentAccountID).getDocument { [weak self] (document, error) in
+        db.collection("Users").document(userID).collection("Accounts").document(documentAccountID).addSnapshotListener { [weak self] (document, error) in
                     guard let strongSelf = self else { return }
                     
                     if let error = error {
@@ -80,6 +83,22 @@ class AccountVC: UIViewController {
         }
     }
 
+    func deleteAccount() {
+        guard let userID = userID, let documentAccountID = documentAccountID else {
+            print("Error: userID or documentAccountID is nil")
+            return
+        }
+        
+        db.collection("Users").document(userID).collection("Accounts").document(documentAccountID).delete { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+
     //MARK: - Actions
 
     /// Başka Hesaba Para Gönderir
@@ -100,8 +119,32 @@ class AccountVC: UIViewController {
         
     }
     
+    /// HESABI SİLER!!!
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        deleteAccount()
+    }
     
     
+    // MARK: - Navigations
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toGetMoney" {
+            if let destinationVC = segue.destination as? GetMoneyVC {
+                destinationVC.userID = self.userID
+                destinationVC.documentAccountID = self.documentAccountID
+            }
+        }
+        else if segue.identifier == "toDepositMoney" {
+            if let destinationVC = segue.destination as? DepositMoneyVC {
+                destinationVC.userID = self.userID
+                destinationVC.documentAccountID = self.documentAccountID
+            }
+        }
+
+    }
+
+
+
     
 
 }
