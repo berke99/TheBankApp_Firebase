@@ -16,7 +16,7 @@ struct BankAccount{
     
 }
 
-enum Currency: String {
+enum Currency: String, CaseIterable{
     case usd = "usd"
     case euro = "euro"
     case tl = "tl"

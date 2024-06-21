@@ -23,7 +23,10 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var userAccounts: [BankAccount] = []
     
     let db = Firestore.firestore()
-
+    var querySnapshot: QuerySnapshot?
+    var selectedAccount: BankAccount?
+    
+    var documentVCID: String = ""
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -36,10 +39,10 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     //MARK: - Functions
     
-    func readUserAccounts(){
+    func readUserAccounts() {
         guard let userID = userID else { return }
         
-        db.collection("Users").document(userID).collection("Accounts").getDocuments { [weak self] (querySnapshot, error) in
+        db.collection("Users").document(userID).collection("Accounts").addSnapshotListener { [weak self] (snapshot, error) in
             guard let strongSelf = self else { return }
             
             if let error = error {
@@ -48,26 +51,35 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
             strongSelf.userAccounts.removeAll()
+            strongSelf.querySnapshot = snapshot
             
-            for document in querySnapshot!.documents {
+            for document in snapshot!.documents {
                 let data = document.data()
                 if let accountType = data["accountType"] as? String,
                    let currencyRawValue = data["currency"] as? String,
                    let currency = Currency(rawValue: currencyRawValue),
                    let amount = data["amount"] as? Double,
-                   let iban = data["iban"] as? Int { // Burayı uygun veri türüne göre güncelleyin
+                   let iban = data["iban"] as? Int {
 
-                   let account = BankAccount(accountType: accountType, currency: currency, amount: amount, iban: iban)
-                   strongSelf.userAccounts.append(account)
+                    let account = BankAccount(accountType: accountType, currency: currency, amount: amount, iban: iban)
+                    strongSelf.userAccounts.append(account)
                 }
             }
             
             strongSelf.tableView.reloadData()
-
-            
-        }// firebase db.collection
+        }
     }
+
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAccountDetail" {
+            if let destinationVC = segue.destination as? AccountVC {
+                destinationVC.account = selectedAccount
+                destinationVC.documentAccountID = documentVCID
+            }
+        }
+    }
+
     
     
     //MARK: - TableView
@@ -86,14 +98,26 @@ class AccountsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selectedAccount = userAccounts[indexPath.row]
+        
+        
+        if let documentID = querySnapshot?.documents[indexPath.row].documentID {
+            //print("Selected Account ID: \(documentID)")
+            documentVCID = documentID
+        }
+        
+        
+        performSegue(withIdentifier: "toAccountDetail", sender: nil)
+        
     }
+    
     
     //MARK: - Actions
     
     
     @IBAction func createNewAccount(_ sender: Any) {
     
-        
+        performSegue(withIdentifier: "toNewAccountVC", sender: nil)
         
     }
     
