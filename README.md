@@ -10,6 +10,7 @@ theBankApp with Firebase
 
 
 ![WhatsApp Image 2024-06-22 at 15 28 42](https://github.com/berke99/TheBankAppFirst/assets/171576493/69256beb-94df-47a2-ac67-ff10f27ebd19)
+<img width="868" alt="Adsız" src="https://github.com/berke99/TheBankAppFirst/assets/171576493/8d32b5ad-a073-43e0-b7f2-6c98c0ca12ef">
 ![WhatsApp Image 2024-06-22 at 15 21 37](https://github.com/berke99/TheBankAppFirst/assets/171576493/ca5cfd56-f6bd-4a7a-baae-255e1ea8f9e1)
 ![WhatsApp Image 2024-06-22 at 15 21 14](https://github.com/berke99/TheBankAppFirst/assets/171576493/554b2549-1470-4748-baaa-6ab2b9e88417)
 ![WhatsApp Image 2024-06-22 at 15 20 47](https://github.com/berke99/TheBankAppFirst/assets/171576493/a12452c8-00c6-451b-bae9-5e7bdfc6a44a)
@@ -22,4 +23,3 @@ theBankApp with Firebase
 ![WhatsApp Image 2024-06-22 at 15 20 18 (1)](https://github.com/berke99/TheBankAppFirst/assets/171576493/695bbe4e-9d45-4f14-9ee7-840d9f488f5a)
 ![WhatsApp Image 2024-06-22 at 15 20 17](https://github.com/berke99/TheBankAppFirst/assets/171576493/6d214723-6ffb-4ced-a058-bd9453c30b15)
 ![WhatsApp Image 2024-06-22 at 15 20 16](https://github.com/berke99/TheBankAppFirst/assets/171576493/586b9d2f-4f0c-4e53-bfd1-363f78c6261f)
-<img width="868" alt="Adsız" src="https://github.com/berke99/TheBankAppFirst/assets/171576493/8d32b5ad-a073-43e0-b7f2-6c98c0ca12ef">
